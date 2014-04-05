@@ -165,7 +165,7 @@ DEPENDENCIES
   gibbon
   google_drive
   haml
-  high_voltage
+  high_voltage (~> 2.1.0)
   jbuilder (~> 1.2)
   jquery-rails
   pry

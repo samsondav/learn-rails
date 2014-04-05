@@ -20,7 +20,7 @@ gem 'figaro'
 gem 'foundation-rails'
 gem 'gibbon'
 gem 'google_drive'
-gem 'high_voltage'
+gem 'high_voltage', '~>2.1.0'
 gem 'simple_form'
 gem 'haml'
 
