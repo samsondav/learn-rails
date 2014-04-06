@@ -14,7 +14,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Gems suggested by Daniel Kehoe (learn-rails)
-gem 'activerecord-tableless'
 gem 'figaro'
 gem 'foundation-rails'
 gem 'gibbon'
@@ -28,6 +27,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'pry'
+  gem 'sqlite3'
 end
 
 group :production do

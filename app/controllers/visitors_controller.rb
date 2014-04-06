@@ -7,7 +7,7 @@ class VisitorsController < ApplicationController
     @visitor = Visitor.new(secure_params)
     if @visitor.valid?
       @visitor.subscribe
-      flash[:notice] = "Thanks. Your email address \"#{visitor.email}\" was subscribed to our list. Please check your inbox and confirm receipt."
+      flash[:notice] = "Thanks. Your email address \"#{@visitor.email}\" was subscribed to our list. Please check your inbox and confirm receipt."
       redirect_to root_path
     else
 #      flash message unneccesary due to simple_forms automatic error display
