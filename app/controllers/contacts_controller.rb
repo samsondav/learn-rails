@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(secure_params)
     if @contact.valid?
-      @contact.update_spreadsheet
+#      @contact.update_spreadsheet #disabled for heroku
       @contact.send_email
       flash[:notice] = "Thanks for your message, #{@contact.name}"
       redirect_to root_path
