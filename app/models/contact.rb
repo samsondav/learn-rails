@@ -1,5 +1,6 @@
 class Contact < ActiveRecord::Base
   has_no_table # specific to activerecord-tableless gem
+  # TODO re-implement as barebones model using ActionPack
 
   # dummy 'columns' == attributes from the activerecord-tableless gem
   column :name, :string
@@ -26,5 +27,18 @@ class Contact < ActiveRecord::Base
     ws[last_row, 3] = self.email
     ws[last_row, 4] = self.content
     ws.save
+  end
+
+  def send_email
+    binding.pry
+    UserMailer.contact_email(self).deliver
+  end
+
+  def time
+    Time.new.strftime("%H:%M")
+  end
+
+  def date
+    Time.now.strftime("%B %d, %Y")
   end
 end
