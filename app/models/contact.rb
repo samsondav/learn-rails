@@ -1,12 +1,7 @@
-class Contact < ActiveRecord::Base
-  has_no_table # specific to activerecord-tableless gem
-  # TODO re-implement as barebones model using ActionPack
+class Contact
+  include ActiveModel::Model
 
-  # dummy 'columns' == attributes from the activerecord-tableless gem
-  column :name, :string
-  column :email, :string
-  column :content, :string
-
+  attr_accessor :name, :email, :content
   validates_presence_of :name
   validates_presence_of :email
   validates_presence_of :content
@@ -30,7 +25,6 @@ class Contact < ActiveRecord::Base
   end
 
   def send_email
-    binding.pry
     UserMailer.contact_email(self).deliver
   end
 
