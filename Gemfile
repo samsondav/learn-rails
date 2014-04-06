@@ -30,3 +30,9 @@ group :development do
   gem 'rails_layout'
   gem 'pry'
 end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+  gem 'rails_12factor'
+end
