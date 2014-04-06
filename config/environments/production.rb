@@ -77,4 +77,18 @@ LearnRails::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Enable sending email in production mode
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mandrillapp.com",
+    port: 25,
+    user_name: ENV["MANDRILL_USERNAME"],
+    password: ENV["MANDRILL_API_KEY"]
+  }
+
+  config.action_mailer.default_url_options = { host: ENV["DOMAIN_NAME"] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_deliveries = true
 end

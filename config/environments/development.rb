@@ -27,6 +27,7 @@ LearnRails::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Enable sending email in development mode
   # ActionMailer config
   config.action_mailer.smtp_settings = {
     address: "smtp.mandrillapp.com",
@@ -39,7 +40,6 @@ LearnRails::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
 
-  # Enable sending email in development mode
   config.action_mailer.perform_deliveries = true
 end
 
