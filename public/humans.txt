@@ -1,0 +1,4 @@
+Site created by Sam Philip, singlehandedly bringing sane rails
+programming to Chile.
+ 
+-- a Slyworks project --
