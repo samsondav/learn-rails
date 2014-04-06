@@ -14,8 +14,9 @@ class ContactsController < ApplicationController
       flash[:notice] = "Thanks for your message, #{@contact.name}"
       redirect_to root_path
     else
+#      flash unnecessary due to simple forms automatice error handling
+#      flash.now[:error] = "Contact details are invalid."
       render :new
-      flash[:error] = "Contact details are invalid."
     end
   end
 
