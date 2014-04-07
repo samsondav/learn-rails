@@ -28,6 +28,9 @@ group :development do
   gem 'rails_layout'
   gem 'pry'
   gem 'sqlite3'
+
+  # analytics by segment.io
+  gem 'analytics-ruby', '~>1.0'
 end
 
 group :production do
